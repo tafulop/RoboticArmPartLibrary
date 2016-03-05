@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>3</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/ArmPart.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newsimpletest.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newtestclass1.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/ArmPart.h</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Joint.h</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Part.h</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Effector.h</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Body.h</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Effector.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Part.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Body.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Joint.cpp</file>
+            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newtestclass.cpp</file>
+        </group>
+    </open-files>
+</project-private>
