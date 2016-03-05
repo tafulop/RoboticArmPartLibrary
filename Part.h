@@ -7,50 +7,64 @@
 namespace RoboticArm {
 	class Part
 	{
-
+            
+        private:
+            
+            
+              
 	protected:
 
-		/* Physical parameters */
-                float length;
-                float mass;
-                
-                /* Additional data */
-                std::string name;
-                int id;
-                
-		Part();
-	        ~Part();
+            /* Physical parameters */
+            float length;
+            float mass;
+
+            /* Additional data */
+            std::string name;
+            int id;
+
+            /**
+             * Set all parameters in the class.
+             * 
+             * @param id
+             * @param name
+             * @param mass
+             * @param length
+             * @return 
+             */
+            Part(int id, std::string name, float mass, float length);
+
+            /* destructor */
+            ~Part();
+            
+            /* default constructor */
+            Part();
 
 	public:
-	
-                /* Construction error codes */
-                static const int INVALID_ARGUMENT = 12;
 		
-                /**
-                 * Shows the name of the part.
-                 * @return 
-                 */
-		std::string getName();
-                
-                /**
-                 * Shows the ID of the part.
-                 * @return 
-                 */
-                int getId();
-                
-                /**
-                 * Gives the length of the part.
-                 * @return 
-                 */
-                float getLength();
-                
-                /**
-                 * Gets the mass of the part.
-                 * @return 
-                 */
-                float getMass();
-		
+            /**
+             * Shows the name of the part.
+             * @return 
+             */
+            std::string getName();
 
+            /**
+             * Shows the ID of the part.
+             * @return 
+             */
+            int getId();
+
+            /**
+             * Gives the length of the part.
+             * @return 
+             */
+            float getLength();
+
+            /**
+             * Gets the mass of the part.
+             * @return 
+             */
+            float getMass();
+		
 	};
 
 }

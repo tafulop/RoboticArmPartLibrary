@@ -123,7 +123,7 @@ void newtestclass1::wrongLengthAsArgument() {
 
     int id = 1;
     std::string name = "test";
-    float mass = -1;
+    float mass = 1;
     float length = -1;
 
     using namespace RoboticArm;
@@ -135,6 +135,5 @@ void newtestclass1::wrongLengthAsArgument() {
     }
 
     CPPUNIT_ASSERT(success);
-
 
 }
