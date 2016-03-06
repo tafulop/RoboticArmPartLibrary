@@ -46,12 +46,21 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 
 # Test Files
 TESTFILES= \
-	${TESTDIR}/TestFiles/f1
+	${TESTDIR}/TestFiles/f1 \
+	${TESTDIR}/TestFiles/f2 \
+	${TESTDIR}/TestFiles/f3 \
+	${TESTDIR}/TestFiles/f4
 
 # Test Object Files
 TESTOBJECTFILES= \
-	${TESTDIR}/tests/newtestclass1.o \
-	${TESTDIR}/tests/newtestrunner1.o
+	${TESTDIR}/tests/ArmPartTest.o \
+	${TESTDIR}/tests/ArmPartTestRunner.o \
+	${TESTDIR}/tests/BodyTestRunner.o \
+	${TESTDIR}/tests/BodyTests.o \
+	${TESTDIR}/tests/EffectorTest.o \
+	${TESTDIR}/tests/EffectorTestRunner.o \
+	${TESTDIR}/tests/JointTest.o \
+	${TESTDIR}/tests/JointTestRunner.o
 
 # C Compiler Flags
 CFLAGS=
@@ -111,21 +120,69 @@ ${OBJECTDIR}/Part.o: Part.cpp
 .build-tests-conf: .build-tests-subprojects .build-conf ${TESTFILES}
 .build-tests-subprojects:
 
-${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/newtestclass1.o ${TESTDIR}/tests/newtestrunner1.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/ArmPartTest.o ${TESTDIR}/tests/ArmPartTestRunner.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.cc}   -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
 
+${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/BodyTestRunner.o ${TESTDIR}/tests/BodyTests.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
 
-${TESTDIR}/tests/newtestclass1.o: tests/newtestclass1.cpp 
+${TESTDIR}/TestFiles/f3: ${TESTDIR}/tests/EffectorTest.o ${TESTDIR}/tests/EffectorTestRunner.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f3 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
+
+${TESTDIR}/TestFiles/f4: ${TESTDIR}/tests/JointTest.o ${TESTDIR}/tests/JointTestRunner.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f4 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
+
+
+${TESTDIR}/tests/ArmPartTest.o: tests/ArmPartTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/newtestclass1.o tests/newtestclass1.cpp
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTest.o tests/ArmPartTest.cpp
 
 
-${TESTDIR}/tests/newtestrunner1.o: tests/newtestrunner1.cpp 
+${TESTDIR}/tests/ArmPartTestRunner.o: tests/ArmPartTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/newtestrunner1.o tests/newtestrunner1.cpp
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTestRunner.o tests/ArmPartTestRunner.cpp
+
+
+${TESTDIR}/tests/BodyTestRunner.o: tests/BodyTestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTestRunner.o tests/BodyTestRunner.cpp
+
+
+${TESTDIR}/tests/BodyTests.o: tests/BodyTests.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTests.o tests/BodyTests.cpp
+
+
+${TESTDIR}/tests/EffectorTest.o: tests/EffectorTest.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTest.o tests/EffectorTest.cpp
+
+
+${TESTDIR}/tests/EffectorTestRunner.o: tests/EffectorTestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTestRunner.o tests/EffectorTestRunner.cpp
+
+
+${TESTDIR}/tests/JointTest.o: tests/JointTest.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTest.o tests/JointTest.cpp
+
+
+${TESTDIR}/tests/JointTestRunner.o: tests/JointTestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTestRunner.o tests/JointTestRunner.cpp
 
 
 ${OBJECTDIR}/ArmPart_nomain.o: ${OBJECTDIR}/ArmPart.o ArmPart.cpp 
@@ -198,6 +255,9 @@ ${OBJECTDIR}/Part_nomain.o: ${OBJECTDIR}/Part.o Part.cpp
 	@if [ "${TEST}" = "" ]; \
 	then  \
 	    ${TESTDIR}/TestFiles/f1 || true; \
+	    ${TESTDIR}/TestFiles/f2 || true; \
+	    ${TESTDIR}/TestFiles/f3 || true; \
+	    ${TESTDIR}/TestFiles/f4 || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi

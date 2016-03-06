@@ -5,33 +5,31 @@
  */
 
 /*
- * File:   newtestclass1.cpp
+ * File:   EffectorTest.cpp
  * Author: fulop
  *
- * Created on Mar 5, 2016, 10:25:14 AM
+ * Created on Mar 6, 2016, 10:11:17 AM
  */
 
-#include "newtestclass1.h"
+#include "EffectorTest.h"
 
 
-CPPUNIT_TEST_SUITE_REGISTRATION(newtestclass1);
+CPPUNIT_TEST_SUITE_REGISTRATION(EffectorTest);
 
-newtestclass1::newtestclass1() {
+EffectorTest::EffectorTest() {
 }
 
-newtestclass1::~newtestclass1() {
+EffectorTest::~EffectorTest() {
 }
 
-void newtestclass1::setUp() {
+void EffectorTest::setUp() {
 }
 
-void newtestclass1::tearDown() {
+void EffectorTest::tearDown() {
 }
 
-/**
- * Constructor test normal
- */
-void newtestclass1::normalConstruct() {
+/* normal construction test */
+void EffectorTest::normalConstruction() {
 
     int id = 1;
     std::string name = "test";
@@ -40,7 +38,7 @@ void newtestclass1::normalConstruct() {
 
     using namespace RoboticArm;
 
-    ArmPart createdPart = ArmPart(id, name, mass, length);
+    Effector createdPart = Effector(id, name, mass, length);
 
     if (createdPart.getId() == id && createdPart.getName() == name &&
             createdPart.getLength() == length && createdPart.getMass() == mass) {
@@ -51,10 +49,8 @@ void newtestclass1::normalConstruct() {
 
 }
 
-/**
- * Wrong Id as argument.
- */
-void newtestclass1::wrongIdAsArgument() {
+/* wrong arguments test */
+void EffectorTest::wrongId() {
 
     bool success = false;
 
@@ -66,7 +62,7 @@ void newtestclass1::wrongIdAsArgument() {
     using namespace RoboticArm;
 
     try {
-        ArmPart createdPart = ArmPart(id, name, mass, length);
+        Effector createdPart = Effector(id, name, mass, length);
     } catch (const std::invalid_argument& ia) {
         success = true;
     }
@@ -75,32 +71,13 @@ void newtestclass1::wrongIdAsArgument() {
 
 }
 
-void newtestclass1::wrongMassAsArgument() {
+/* invalid name */
+void EffectorTest::wrongName() {
+
 
     bool success = false;
 
-    int id = 1;
-    std::string name = "test";
-    float mass = -1;
-    float length = 2;
-
-    using namespace RoboticArm;
-
-    try {
-        ArmPart createdPart = ArmPart(id, name, mass, length);
-    } catch (const std::invalid_argument& ia) {
-        success = true;
-    }
-
-    CPPUNIT_ASSERT(success);
-
-}
-
-void newtestclass1::wrongNameAsArgument() {
-
-    bool success = false;
-
-    int id = 1;
+    int id = -1;
     std::string name = "";
     float mass = 1;
     float length = 2;
@@ -108,7 +85,7 @@ void newtestclass1::wrongNameAsArgument() {
     using namespace RoboticArm;
 
     try {
-        ArmPart createdPart = ArmPart(id, name, mass, length);
+        Effector createdPart = Effector(id, name, mass, length);
     } catch (const std::invalid_argument& ia) {
         success = true;
     }
@@ -117,19 +94,43 @@ void newtestclass1::wrongNameAsArgument() {
 
 }
 
-void newtestclass1::wrongLengthAsArgument() {
+/* invalid mass */
+void EffectorTest::wrongMass() {
+
 
     bool success = false;
 
-    int id = 1;
+    int id = -1;
     std::string name = "test";
-    float mass = 1;
+    float mass = -1;
+    float length = 2;
+
+    using namespace RoboticArm;
+
+    try {
+        Effector createdPart = Effector(id, name, mass, length);
+    } catch (const std::invalid_argument& ia) {
+        success = true;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}
+
+/* invalid length */
+void EffectorTest::wrongLength() {
+
+    bool success = false;
+
+    int id = -1;
+    std::string name = "test";
+    float mass = 2;
     float length = -1;
 
     using namespace RoboticArm;
 
     try {
-        ArmPart createdPart = ArmPart(id, name, mass, length);
+        Effector createdPart = Effector(id, name, mass, length);
     } catch (const std::invalid_argument& ia) {
         success = true;
     }
@@ -137,3 +138,4 @@ void newtestclass1::wrongLengthAsArgument() {
     CPPUNIT_ASSERT(success);
 
 }
+

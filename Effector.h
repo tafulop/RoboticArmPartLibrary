@@ -2,16 +2,29 @@
 #include "Part.h"
 namespace RoboticArm {
 
-	class Effector :
-		public Part
-	{
-		friend class PartFactory;
+	class Effector :  public Part
+	{	
 
 	private:
-		Effector(int id, std::string name, float mass);
+            /* default constructor */    
+            Effector();
+                
 	public:
-		//Effector();
-		~Effector();
+            
+            /**
+             * Parameterized constructor for the class.
+             * 
+             * @param id
+             * @param name
+             * @param mass
+             * @param length
+             */
+            Effector(int id, std::string name, float mass, float length) 
+                    :
+            Part(id, name, mass, length){};
+	
+            /* destructor */
+            ~Effector();
 	};
 
 }

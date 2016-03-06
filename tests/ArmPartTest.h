@@ -18,9 +18,9 @@
 
 #include "../ArmPart.h"
 
-class newtestclass1 : public CPPUNIT_NS::TestFixture {
+class ArmPartTest : public CPPUNIT_NS::TestFixture {
     
-    CPPUNIT_TEST_SUITE(newtestclass1);
+    CPPUNIT_TEST_SUITE(ArmPartTest);
     
     /* Normal construction */
     CPPUNIT_TEST(normalConstruct);
@@ -36,8 +36,8 @@ class newtestclass1 : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST_SUITE_END();
 
 public:
-    newtestclass1();
-    virtual ~newtestclass1();
+    ArmPartTest();
+    virtual ~ArmPartTest();
     void setUp();
     void tearDown();
 

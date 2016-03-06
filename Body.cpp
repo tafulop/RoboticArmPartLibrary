@@ -3,18 +3,11 @@
 
 namespace RoboticArm {
 
-	RoboticArm::Body::Body(int id, std::string name, float mass)
-	{
-		this->id = id;
-		this->name = name;
-		this->mass = mass;
-		
-	}
+        /* default constructor */
+        RoboticArm::Body::Body(){}
 
-	RoboticArm::Body::~Body()
-	{
-	}
-
-
+        /* destructor */
+	RoboticArm::Body::~Body(){}
+	
 
 }

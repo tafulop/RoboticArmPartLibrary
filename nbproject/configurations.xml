@@ -32,9 +32,33 @@
                      displayName="ArmPartsTest"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>tests/newtestclass1.cpp</itemPath>
-        <itemPath>tests/newtestclass1.h</itemPath>
-        <itemPath>tests/newtestrunner1.cpp</itemPath>
+        <itemPath>tests/ArmPartTest.cpp</itemPath>
+        <itemPath>tests/ArmPartTest.h</itemPath>
+        <itemPath>tests/ArmPartTestRunner.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="BodyTests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/BodyTestRunner.cpp</itemPath>
+        <itemPath>tests/BodyTests.cpp</itemPath>
+        <itemPath>tests/BodyTests.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3"
+                     displayName="EffectorTests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/EffectorTest.cpp</itemPath>
+        <itemPath>tests/EffectorTest.h</itemPath>
+        <itemPath>tests/EffectorTestRunner.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="JointTest"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/JointTest.cpp</itemPath>
+        <itemPath>tests/JointTest.h</itemPath>
+        <itemPath>tests/JointTestRunner.cpp</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -95,11 +119,71 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="tests/newtestclass1.cpp" ex="false" tool="1" flavor2="0">
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="tests/ArmPartTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="tests/newtestclass1.h" ex="false" tool="3" flavor2="0">
+      <item path="tests/ArmPartTest.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/newtestrunner1.cpp" ex="false" tool="1" flavor2="0">
+      <item path="tests/ArmPartTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/EffectorTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/EffectorTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/EffectorTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/JointTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/JointTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/JointTestRunner.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -160,11 +244,71 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="tests/newtestclass1.cpp" ex="false" tool="1" flavor2="0">
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="tests/ArmPartTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="tests/newtestclass1.h" ex="false" tool="3" flavor2="0">
+      <item path="tests/ArmPartTest.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/newtestrunner1.cpp" ex="false" tool="1" flavor2="0">
+      <item path="tests/ArmPartTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/BodyTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/EffectorTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/EffectorTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/EffectorTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/JointTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/JointTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/JointTestRunner.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

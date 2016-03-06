@@ -8,24 +8,34 @@ namespace RoboticArm {
 	class Joint : public Part
 	{
 
-		friend class PartFactory;
-
 	private:
 		
-		float maxRadialForce;
-		float maxAxialForce;
-		float angle;
-		Joint(int id, std::string name, float mass, float maxRadialForce, float maxAxialForce);
-		
+            /* additional physical parameters */
+            float maxRadialForce;
+            float maxAxialForce;
+            float angle;
 
+            /* default constructor */
+            Joint();
+            
 	public:
-		~Joint();
+            
+            /**
+             * Parameterized constructor for the class.
+             * 
+             * @param id
+             * @param name
+             * @param mass
+             * @param maxRadialForce
+             * @param maxAxialForce
+             */
+            Joint(int id, std::string name, float mass, float length)
+            :
+            Part(id, name, mass, length){};
+            
+            /* destructor */
+            ~Joint();
 	
-		bool isAxialOutOfLimit(float force);
-		bool isRadialOutOfLimit(float force);
-		
-		
-		
 	};
 
 }

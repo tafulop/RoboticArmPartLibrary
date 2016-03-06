@@ -6,15 +6,28 @@ namespace RoboticArm{
 
 	class Body : public Part
 	{
-		friend class PartFactory;
+		
 
 	private:
-		Body(int id, std::string name, float mass);
+            Body();
 		
 
 	public:
-		~Body();
-		void setPosition(float, float, float, float);
-	};
+            ~Body();
+            
+            /**
+             * The parameterized constructor for the class.
+             * 
+             * @param 
+             * @param 
+             * @param 
+             * @param 
+             * @return 
+             */
+            Body(int id, std::string name, float mass, float length)
+            :
+            Part(id, name, mass, length) 
+            {}
+            };
 
 }
