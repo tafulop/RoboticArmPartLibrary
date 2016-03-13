@@ -5,13 +5,10 @@
 #include <stdexcept>      // std::invalid_argument
 
 namespace RoboticArm {
-	class Part
-	{
-            
+    class Part
+    {     
         private:
-            
-            
-              
+   
 	protected:
 
             /* Physical parameters */
@@ -33,8 +30,6 @@ namespace RoboticArm {
              */
             Part(int id, std::string name, float mass, float length);
 
-            /* destructor */
-            ~Part();
             
             /* default constructor */
             Part();
@@ -65,6 +60,9 @@ namespace RoboticArm {
              */
             float getMass();
 		
-	};
+            
+            /* destructor */
+            ~Part();
+    };
 
 }

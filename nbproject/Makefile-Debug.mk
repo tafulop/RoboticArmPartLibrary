@@ -91,27 +91,27 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a: ${OBJECTFILES}
 ${OBJECTDIR}/ArmPart.o: ArmPart.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArmPart.o ArmPart.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArmPart.o ArmPart.cpp
 
 ${OBJECTDIR}/Body.o: Body.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Body.o Body.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Body.o Body.cpp
 
 ${OBJECTDIR}/Effector.o: Effector.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Effector.o Effector.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Effector.o Effector.cpp
 
 ${OBJECTDIR}/Joint.o: Joint.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Joint.o Joint.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Joint.o Joint.cpp
 
 ${OBJECTDIR}/Part.o: Part.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Part.o Part.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Part.o Part.cpp
 
 # Subprojects
 .build-subprojects:
@@ -140,49 +140,49 @@ ${TESTDIR}/TestFiles/f4: ${TESTDIR}/tests/JointTest.o ${TESTDIR}/tests/JointTest
 ${TESTDIR}/tests/ArmPartTest.o: tests/ArmPartTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTest.o tests/ArmPartTest.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTest.o tests/ArmPartTest.cpp
 
 
 ${TESTDIR}/tests/ArmPartTestRunner.o: tests/ArmPartTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTestRunner.o tests/ArmPartTestRunner.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/ArmPartTestRunner.o tests/ArmPartTestRunner.cpp
 
 
 ${TESTDIR}/tests/BodyTestRunner.o: tests/BodyTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTestRunner.o tests/BodyTestRunner.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTestRunner.o tests/BodyTestRunner.cpp
 
 
 ${TESTDIR}/tests/BodyTests.o: tests/BodyTests.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTests.o tests/BodyTests.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/BodyTests.o tests/BodyTests.cpp
 
 
 ${TESTDIR}/tests/EffectorTest.o: tests/EffectorTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTest.o tests/EffectorTest.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTest.o tests/EffectorTest.cpp
 
 
 ${TESTDIR}/tests/EffectorTestRunner.o: tests/EffectorTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTestRunner.o tests/EffectorTestRunner.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/EffectorTestRunner.o tests/EffectorTestRunner.cpp
 
 
 ${TESTDIR}/tests/JointTest.o: tests/JointTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTest.o tests/JointTest.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTest.o tests/JointTest.cpp
 
 
 ${TESTDIR}/tests/JointTestRunner.o: tests/JointTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTestRunner.o tests/JointTestRunner.cpp
+	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTestRunner.o tests/JointTestRunner.cpp
 
 
 ${OBJECTDIR}/ArmPart_nomain.o: ${OBJECTDIR}/ArmPart.o ArmPart.cpp 
@@ -193,7 +193,7 @@ ${OBJECTDIR}/ArmPart_nomain.o: ${OBJECTDIR}/ArmPart.o ArmPart.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArmPart_nomain.o ArmPart.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArmPart_nomain.o ArmPart.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/ArmPart.o ${OBJECTDIR}/ArmPart_nomain.o;\
 	fi
@@ -206,7 +206,7 @@ ${OBJECTDIR}/Body_nomain.o: ${OBJECTDIR}/Body.o Body.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Body_nomain.o Body.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Body_nomain.o Body.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Body.o ${OBJECTDIR}/Body_nomain.o;\
 	fi
@@ -219,7 +219,7 @@ ${OBJECTDIR}/Effector_nomain.o: ${OBJECTDIR}/Effector.o Effector.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Effector_nomain.o Effector.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Effector_nomain.o Effector.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Effector.o ${OBJECTDIR}/Effector_nomain.o;\
 	fi
@@ -232,7 +232,7 @@ ${OBJECTDIR}/Joint_nomain.o: ${OBJECTDIR}/Joint.o Joint.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Joint_nomain.o Joint.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Joint_nomain.o Joint.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Joint.o ${OBJECTDIR}/Joint_nomain.o;\
 	fi
@@ -245,7 +245,7 @@ ${OBJECTDIR}/Part_nomain.o: ${OBJECTDIR}/Part.o Part.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Part_nomain.o Part.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Part_nomain.o Part.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Part.o ${OBJECTDIR}/Part_nomain.o;\
 	fi

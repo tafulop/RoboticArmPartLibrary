@@ -80,6 +80,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
         <archiverTool>
         </archiverTool>
       </compileType>

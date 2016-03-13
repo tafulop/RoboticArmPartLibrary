@@ -137,3 +137,4 @@ void ArmPartTest::wrongLengthAsArgument() {
     CPPUNIT_ASSERT(success);
 
 }
+

@@ -2,6 +2,7 @@
 
 #include "Part.h"
 #include "ArmPart.h"
+#include <mutex>
 
 namespace RoboticArm {
 
@@ -14,6 +15,9 @@ namespace RoboticArm {
             float maxRadialForce;
             float maxAxialForce;
             float angle;
+            
+            /* Multithreading */
+            std::mutex angle_lock;
 
             /* default constructor */
             Joint();
@@ -32,6 +36,19 @@ namespace RoboticArm {
             Joint(int id, std::string name, float mass, float length)
             :
             Part(id, name, mass, length){};
+            
+            /**
+             * Sets the current angle for the joint.
+             * @param angle the angle that must be set.
+             */
+            void setAngle(float angle);
+            
+            /**
+             * Returns the current angle of the joint.
+             * @return 
+             */
+            float getAngle();
+            
             
             /* destructor */
             ~Joint();

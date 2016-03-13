@@ -9,15 +9,12 @@
         <group>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/ArmPart.cpp</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newsimpletest.cpp</file>
-            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newtestclass1.cpp</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/ArmPart.h</file>
-            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newtestclass1.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Joint.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Part.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Effector.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Body.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Effector.cpp</file>
-            <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/tests/newtestrunner1.cpp</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Part.cpp</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/AllParts.h</file>
             <file>file:/mnt/western_digital_2TB/Development/Robotkar/ArmPartsLibrary/RoboticArmParts/Body.cpp</file>
