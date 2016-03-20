@@ -60,6 +60,12 @@ namespace RoboticArm {
              */
             float getMass();
 		
+            /**
+             * Copy constructor.
+             * @param orig
+             */
+            Part(const Part& orig);
+            
             
             /* destructor */
             ~Part();

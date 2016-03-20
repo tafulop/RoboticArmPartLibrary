@@ -9,7 +9,12 @@ Joint::~Joint(){}
 Joint::Joint(){}
 
 /* Copy constructor */
-Joint::Joint(const Joint& obj){}
+Joint::Joint(const Joint& obj){
+    this->id = obj.id;
+    this->length = obj.length;
+    this->mass = obj.mass;
+    this->name = obj.name;
+}
 
 /* sets the angle */
 void Joint::setAngle(float angle){

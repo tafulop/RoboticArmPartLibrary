@@ -49,7 +49,8 @@ TESTFILES= \
 	${TESTDIR}/TestFiles/f1 \
 	${TESTDIR}/TestFiles/f2 \
 	${TESTDIR}/TestFiles/f3 \
-	${TESTDIR}/TestFiles/f4
+	${TESTDIR}/TestFiles/f4 \
+	${TESTDIR}/TestFiles/f5
 
 # Test Object Files
 TESTOBJECTFILES= \
@@ -60,7 +61,9 @@ TESTOBJECTFILES= \
 	${TESTDIR}/tests/EffectorTest.o \
 	${TESTDIR}/tests/EffectorTestRunner.o \
 	${TESTDIR}/tests/JointTest.o \
-	${TESTDIR}/tests/JointTestRunner.o
+	${TESTDIR}/tests/JointTestRunner.o \
+	${TESTDIR}/tests/MapTest.o \
+	${TESTDIR}/tests/MapTestRunner.o
 
 # C Compiler Flags
 CFLAGS=
@@ -136,6 +139,10 @@ ${TESTDIR}/TestFiles/f4: ${TESTDIR}/tests/JointTest.o ${TESTDIR}/tests/JointTest
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.cc}   -o ${TESTDIR}/TestFiles/f4 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
 
+${TESTDIR}/TestFiles/f5: ${TESTDIR}/tests/MapTest.o ${TESTDIR}/tests/MapTestRunner.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f5 $^ ${LDLIBSOPTIONS} `cppunit-config --libs`   
+
 
 ${TESTDIR}/tests/ArmPartTest.o: tests/ArmPartTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
@@ -183,6 +190,18 @@ ${TESTDIR}/tests/JointTestRunner.o: tests/JointTestRunner.cpp
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/JointTestRunner.o tests/JointTestRunner.cpp
+
+
+${TESTDIR}/tests/MapTest.o: tests/MapTest.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/MapTest.o tests/MapTest.cpp
+
+
+${TESTDIR}/tests/MapTestRunner.o: tests/MapTestRunner.cpp 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/MapTestRunner.o tests/MapTestRunner.cpp
 
 
 ${OBJECTDIR}/ArmPart_nomain.o: ${OBJECTDIR}/ArmPart.o ArmPart.cpp 
@@ -258,6 +277,7 @@ ${OBJECTDIR}/Part_nomain.o: ${OBJECTDIR}/Part.o Part.cpp
 	    ${TESTDIR}/TestFiles/f2 || true; \
 	    ${TESTDIR}/TestFiles/f3 || true; \
 	    ${TESTDIR}/TestFiles/f4 || true; \
+	    ${TESTDIR}/TestFiles/f5 || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi

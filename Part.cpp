@@ -1,6 +1,9 @@
 #include "Part.h"
 
 namespace RoboticArm {
+    
+    /* Copy constructor */
+    Part::Part(const Part& orig){}
 
     /* Default constructor */
     Part::Part() {}

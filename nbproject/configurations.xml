@@ -60,6 +60,11 @@
         <itemPath>tests/JointTest.h</itemPath>
         <itemPath>tests/JointTestRunner.cpp</itemPath>
       </logicalFolder>
+      <logicalFolder name="f5" displayName="MapTest" projectFiles="true" kind="TEST">
+        <itemPath>tests/MapTest.cpp</itemPath>
+        <itemPath>tests/MapTest.h</itemPath>
+        <itemPath>tests/MapTestRunner.cpp</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -164,6 +169,20 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
+      <folder path="TestFiles/f5">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
       <item path="tests/ArmPartTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tests/ArmPartTest.h" ex="false" tool="3" flavor2="0">
@@ -187,6 +206,12 @@
       <item path="tests/JointTest.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests/JointTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/MapTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/MapTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/MapTestRunner.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -289,6 +314,20 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
+      <folder path="TestFiles/f5">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
       <item path="tests/ArmPartTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tests/ArmPartTest.h" ex="false" tool="3" flavor2="0">
@@ -312,6 +351,12 @@
       <item path="tests/JointTest.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests/JointTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/MapTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/MapTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/MapTestRunner.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

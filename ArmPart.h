@@ -8,14 +8,8 @@ namespace RoboticArm {
     
     private:
 
-        
-        
-        
 
     public:
-        
-        /* default constructor is hidden */
-        ArmPart();
 
         /**
          * Copy constructor.
