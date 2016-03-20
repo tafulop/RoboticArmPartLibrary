@@ -14,6 +14,8 @@ namespace RoboticArm{
 
     public:
         ~Body();
+        
+        Body(const Body& obj);
 
     /**
      * The parameterized constructor for the class.

@@ -4,13 +4,25 @@
 namespace RoboticArm {
 
     class ArmPart : public Part {
+    
+    
     private:
 
+        
+        
+        
+
+    public:
+        
         /* default constructor is hidden */
         ArmPart();
 
-    public:
-
+        /**
+         * Copy constructor.
+         * @param obj
+         */
+        ArmPart(const ArmPart& obj);
+        
         /**
          * The only invokable constructor for the class.
          * 

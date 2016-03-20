@@ -24,14 +24,19 @@ namespace RoboticArm {
             
 	public:
             
+            
+            /**
+             * Copy constructor.
+             * @param obj
+             */
+            Joint(const Joint& obj);
+            
             /**
              * Parameterized constructor for the class.
              * 
              * @param id
              * @param name
              * @param mass
-             * @param maxRadialForce
-             * @param maxAxialForce
              */
             Joint(int id, std::string name, float mass, float length)
             :

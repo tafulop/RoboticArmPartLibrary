@@ -12,6 +12,12 @@ namespace RoboticArm {
 	public:
             
             /**
+             * Copy constructor.
+             * @param obj
+             */
+            Effector(const Effector& obj);
+            
+            /**
              * Parameterized constructor for the class.
              * 
              * @param id

@@ -139,3 +139,46 @@ void EffectorTest::wrongLength() {
 
 }
 
+
+void EffectorTest::validParReadBack(){
+    
+    bool success = true;
+
+    int id = 111;
+    std::string name = "test";
+    float mass = 123.54566;
+    float length = 14676.54;
+
+    using namespace RoboticArm;
+
+    try {
+        Effector createdPart = Effector(id, name, mass, length);
+
+        if (id != createdPart.getId()) {
+            std::cout << "ID is wrong." << std::endl;
+            success = false;
+        }
+
+        if (name != createdPart.getName()) {
+            std::cout << "Name is wrong." << std::endl;
+            success = false;
+        }
+
+        if (mass != createdPart.getMass()) {
+            std::cout << "Mass is wrong." << std::endl;
+            success = false;
+        }
+
+        if (length != createdPart.getLength()) {
+            std::cout << "Length is wrong." << std::endl;
+            success = false;
+        }
+
+
+    } catch (const std::invalid_argument& ia) {
+        success = false;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}

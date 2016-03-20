@@ -28,6 +28,9 @@ class EffectorTest : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST(wrongName);
     CPPUNIT_TEST(wrongMass);
     CPPUNIT_TEST(wrongLength);
+    
+    /* valid par */
+    CPPUNIT_TEST(validParReadBack);
 
     CPPUNIT_TEST_SUITE_END();
 
@@ -46,6 +49,9 @@ private:
     void wrongName();
     void wrongMass();
     void wrongLength();
+    
+    /* valid arg */
+    void validParReadBack();
 };
 
 #endif /* EFFECTORTEST_H */

@@ -28,115 +28,155 @@ void BodyTests::setUp() {
 void BodyTests::tearDown() {
 }
 
-    /* normal construction test */
-    void BodyTests::normalConstruction(){
-    
-        int id = 1;
-        std::string name = "test";
-        float mass = 2;
-        float length = 3;
+/* normal construction test */
+void BodyTests::normalConstruction() {
 
-        using namespace RoboticArm;
+    int id = 1;
+    std::string name = "test";
+    float mass = 2;
+    float length = 3;
 
+    using namespace RoboticArm;
+
+    Body createdPart = Body(id, name, mass, length);
+
+    if (createdPart.getId() == id && createdPart.getName() == name &&
+            createdPart.getLength() == length && createdPart.getMass() == mass) {
+        CPPUNIT_ASSERT(true);
+    } else {
+        CPPUNIT_ASSERT(false);
+    }
+
+}
+
+/* wrong arguments test */
+void BodyTests::wrongId() {
+
+    bool success = false;
+
+    int id = -1;
+    std::string name = "test";
+    float mass = 1;
+    float length = 2;
+
+    using namespace RoboticArm;
+
+    try {
+        Body createdPart = Body(id, name, mass, length);
+    } catch (const std::invalid_argument& ia) {
+        success = true;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}
+
+/* invalid name */
+void BodyTests::wrongName() {
+
+
+    bool success = false;
+
+    int id = -1;
+    std::string name = "";
+    float mass = 1;
+    float length = 2;
+
+    using namespace RoboticArm;
+
+    try {
+        Body createdPart = Body(id, name, mass, length);
+    } catch (const std::invalid_argument& ia) {
+        success = true;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}
+
+/* invalid mass */
+void BodyTests::wrongMass() {
+
+
+    bool success = false;
+
+    int id = -1;
+    std::string name = "test";
+    float mass = -1;
+    float length = 2;
+
+    using namespace RoboticArm;
+
+    try {
+        Body createdPart = Body(id, name, mass, length);
+    } catch (const std::invalid_argument& ia) {
+        success = true;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}
+
+/* invalid length */
+void BodyTests::wrongLength() {
+
+    bool success = false;
+
+    int id = -1;
+    std::string name = "test";
+    float mass = 2;
+    float length = -1;
+
+    using namespace RoboticArm;
+
+    try {
+        Body createdPart = Body(id, name, mass, length);
+    } catch (const std::invalid_argument& ia) {
+        success = true;
+    }
+
+    CPPUNIT_ASSERT(success);
+
+}
+
+void BodyTests::validParReadBack() {
+
+    bool success = true;
+
+    int id = 111;
+    std::string name = "test";
+    float mass = 123.54566;
+    float length = 14676.54;
+
+    using namespace RoboticArm;
+
+    try {
         Body createdPart = Body(id, name, mass, length);
 
-        if (createdPart.getId() == id && createdPart.getName() == name &&
-                createdPart.getLength() == length && createdPart.getMass() == mass) {
-            CPPUNIT_ASSERT(true);
-        } else {
-            CPPUNIT_ASSERT(false);
-        }
-    
-    }
-    
-    /* wrong arguments test */
-    void BodyTests::wrongId(){
-        
-         bool success = false;
-
-        int id = -1;
-        std::string name = "test";
-        float mass = 1;
-        float length = 2;
-
-        using namespace RoboticArm;
-
-        try {
-            Body createdPart = Body(id, name, mass, length);
-        } catch (const std::invalid_argument& ia) {
-            success = true;
+        if (id != createdPart.getId()) {
+            std::cout << "ID is wrong." << std::endl;
+            success = false;
         }
 
-        CPPUNIT_ASSERT(success);
-
-    }
-    
-    
-    /* invalid name */
-    void BodyTests::wrongName(){
-        
-                
-         bool success = false;
-
-        int id = -1;
-        std::string name = "";
-        float mass = 1;
-        float length = 2;
-
-        using namespace RoboticArm;
-
-        try {
-            Body createdPart = Body(id, name, mass, length);
-        } catch (const std::invalid_argument& ia) {
-            success = true;
+        if (name != createdPart.getName()) {
+            std::cout << "Name is wrong." << std::endl;
+            success = false;
         }
 
-        CPPUNIT_ASSERT(success);
-    
-    }
-    
-    
-    /* invalid mass */
-    void BodyTests::wrongMass(){
-        
-                
-        bool success = false;
-
-        int id = -1;
-        std::string name = "test";
-        float mass = -1;
-        float length = 2;
-
-        using namespace RoboticArm;
-
-        try {
-            Body createdPart = Body(id, name, mass, length);
-        } catch (const std::invalid_argument& ia) {
-            success = true;
+        if (mass != createdPart.getMass()) {
+            std::cout << "Mass is wrong." << std::endl;
+            success = false;
         }
 
-        CPPUNIT_ASSERT(success);
-
-    }
-    
-    /* invalid length */
-    void BodyTests::wrongLength(){
-             
-        bool success = false;
-
-        int id = -1;
-        std::string name = "test";
-        float mass = 2;
-        float length = -1;
-
-        using namespace RoboticArm;
-
-        try {
-            Body createdPart = Body(id, name, mass, length);
-        } catch (const std::invalid_argument& ia) {
-            success = true;
+        if (length != createdPart.getLength()) {
+            std::cout << "Length is wrong." << std::endl;
+            success = false;
         }
 
-        CPPUNIT_ASSERT(success);
-    
+
+    } catch (const std::invalid_argument& ia) {
+        success = false;
     }
+
+    CPPUNIT_ASSERT(success);
+}

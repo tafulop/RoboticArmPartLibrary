@@ -31,6 +31,7 @@ class ArmPartTest : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST(wrongNameAsArgument);
     CPPUNIT_TEST(wrongLengthAsArgument);
     
+    CPPUNIT_TEST(validParReadback);
    
 
     CPPUNIT_TEST_SUITE_END();
@@ -51,7 +52,9 @@ private:
     void wrongMassAsArgument();
     void wrongNameAsArgument();
     void wrongLengthAsArgument();
-
+    
+    /* parameter read back */
+    void validParReadback();
     
     
 };

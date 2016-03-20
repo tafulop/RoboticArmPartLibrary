@@ -8,3 +8,6 @@ Effector::Effector(){}
 /* destructor */
 Effector::~Effector(){}
 
+/* copy constructor */
+Effector::Effector(const Effector& obj){
+}

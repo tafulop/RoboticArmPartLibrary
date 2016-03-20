@@ -80,13 +80,13 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a ${OBJECTFILES} 
-	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a
+	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a ${OBJECTFILES} 
+	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a
 
 ${OBJECTDIR}/ArmPart.o: ArmPart.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -265,7 +265,7 @@ ${OBJECTDIR}/Part_nomain.o: ${OBJECTDIR}/Part.o Part.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmparts.a
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libroboticarmpartlibrary.a
 
 # Subprojects
 .clean-subprojects:

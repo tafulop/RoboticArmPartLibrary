@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=libroboticarmparts.a
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/libroboticarmparts.a
+CND_ARTIFACT_NAME_Debug=libroboticarmpartlibrary.a
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/libroboticarmpartlibrary.a
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=RoboticArmParts.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/RoboticArmParts.tar
+CND_PACKAGE_NAME_Debug=RoboticArmPartLibrary.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/RoboticArmPartLibrary.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=libroboticarmparts.a
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/libroboticarmparts.a
+CND_ARTIFACT_NAME_Release=libroboticarmpartlibrary.a
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/libroboticarmpartlibrary.a
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=RoboticArmParts.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/RoboticArmParts.tar
+CND_PACKAGE_NAME_Release=RoboticArmPartLibrary.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/RoboticArmPartLibrary.tar
 #
 # include compiler specific variables
 #

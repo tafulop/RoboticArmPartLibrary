@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=RoboticArmParts
+PROJECTNAME=RoboticArmPartLibrary
 
 # Active Configuration
 DEFAULTCONF=Debug

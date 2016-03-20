@@ -8,6 +8,9 @@ Joint::~Joint(){}
 /* constructor */
 Joint::Joint(){}
 
+/* Copy constructor */
+Joint::Joint(const Joint& obj){}
+
 /* sets the angle */
 void Joint::setAngle(float angle){
     
