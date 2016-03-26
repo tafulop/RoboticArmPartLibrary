@@ -25,9 +25,9 @@ namespace RoboticArm {
              * @param mass
              * @param length
              */
-            Effector(int id, std::string name, float mass, float length) 
+            Effector(std::string name, float mass, float length) 
                     :
-            Part(id, name, mass, length){};
+            Part(name, mass, length){};
 	
             /* destructor */
             ~Effector();

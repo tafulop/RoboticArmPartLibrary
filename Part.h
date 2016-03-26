@@ -17,18 +17,16 @@ namespace RoboticArm {
 
             /* Additional data */
             std::string name;
-            int id;
 
             /**
              * Set all parameters in the class.
              * 
-             * @param id
              * @param name
              * @param mass
              * @param length
              * @return 
              */
-            Part(int id, std::string name, float mass, float length);
+            Part(std::string name, float mass, float length);
 
             
             /* default constructor */
@@ -43,12 +41,6 @@ namespace RoboticArm {
             std::string getName();
 
             /**
-             * Shows the ID of the part.
-             * @return 
-             */
-            int getId();
-
-            /**
              * Gives the length of the part.
              * @return 
              */
@@ -58,14 +50,7 @@ namespace RoboticArm {
              * Gets the mass of the part.
              * @return 
              */
-            float getMass();
-		
-            /**
-             * Copy constructor.
-             * @param orig
-             */
-            Part(const Part& orig);
-            
+            float getMass();            
             
             /* destructor */
             ~Part();

@@ -11,7 +11,6 @@ namespace RoboticArm {
 
     /* copy constructor */
     RoboticArm::Body::Body(const Body& obj){
-        this->id = obj.id;
         this->length = obj.length;
         this->mass = obj.mass;
         this->name = obj.name;

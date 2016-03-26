@@ -26,7 +26,6 @@ class ArmPartTest : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST(normalConstruct);
     
     /* Wrong arguments */
-    CPPUNIT_TEST(wrongIdAsArgument);
     CPPUNIT_TEST(wrongMassAsArgument);
     CPPUNIT_TEST(wrongNameAsArgument);
     CPPUNIT_TEST(wrongLengthAsArgument);
@@ -48,7 +47,6 @@ private:
     void normalConstruct();
     
     /* Wrong arguments */
-    void wrongIdAsArgument();
     void wrongMassAsArgument();
     void wrongNameAsArgument();
     void wrongLengthAsArgument();

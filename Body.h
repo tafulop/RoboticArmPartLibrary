@@ -26,9 +26,9 @@ namespace RoboticArm{
      * @param 
      * @return 
      */
-    Body(int id, std::string name, float mass, float length)
+    Body(std::string name, float mass, float length)
     :
-    Part(id, name, mass, length) 
+    Part(name, mass, length) 
     {}
     };
 

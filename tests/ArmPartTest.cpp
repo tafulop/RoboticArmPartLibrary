@@ -33,16 +33,15 @@ void ArmPartTest::tearDown() {
  */
 void ArmPartTest::normalConstruct() {
 
-    int id = 1;
     std::string name = "test";
     float mass = 2;
     float length = 3;
 
     using namespace RoboticArm;
 
-    ArmPart createdPart = ArmPart(id, name, mass, length);
+    ArmPart createdPart = ArmPart(name, mass, length);
 
-    if (createdPart.getId() == id && createdPart.getName() == name &&
+    if (createdPart.getName() == name &&
             createdPart.getLength() == length && createdPart.getMass() == mass) {
         CPPUNIT_ASSERT(true);
     } else {
@@ -51,29 +50,6 @@ void ArmPartTest::normalConstruct() {
 
 }
 
-/**
- * Wrong Id as argument.
- */
-void ArmPartTest::wrongIdAsArgument() {
-
-    bool success = false;
-
-    int id = -1;
-    std::string name = "test";
-    float mass = 1;
-    float length = 2;
-
-    using namespace RoboticArm;
-
-    try {
-        ArmPart createdPart = ArmPart(id, name, mass, length);
-    } catch (const std::invalid_argument& ia) {
-        success = true;
-    }
-
-    CPPUNIT_ASSERT(success);
-
-}
 
 void ArmPartTest::wrongMassAsArgument() {
 

@@ -38,9 +38,9 @@ namespace RoboticArm {
              * @param name
              * @param mass
              */
-            Joint(int id, std::string name, float mass, float length)
+            Joint(std::string name, float mass, float length)
             :
-            Part(id, name, mass, length){};
+            Part(name, mass, length){};
             
             /**
              * Sets the current angle for the joint.
