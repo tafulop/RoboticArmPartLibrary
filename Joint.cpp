@@ -13,6 +13,9 @@ Joint::Joint(const Joint& obj){
     this->length = obj.length;
     this->mass = obj.mass;
     this->name = obj.name;
+    this->angle = obj.angle;
+    this->maxAxialForce = obj.maxAxialForce;
+    this->maxRadialForce = obj.maxRadialForce;
 }
 
 /* sets the angle */
